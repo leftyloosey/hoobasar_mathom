@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-
+import { Link } from 'react-router'
 import './App.css'
 
 function App() {
@@ -7,7 +7,8 @@ function App() {
 
   return (
     <>
-      <p>allo</p>
+      <p>allo!!!</p>
+      <Link to='/home'>home</Link>
     </>
   )
 }
