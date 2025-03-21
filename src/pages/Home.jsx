@@ -3,7 +3,7 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      <p className='text-red-500'>home</p>
+      <p className='text-red-500'>homeostasis</p>
     </div>
   )
 }
