@@ -35,15 +35,7 @@ http {
                 listen <%= ENV["PORT"] %>;
                 server_name _;
                 keepalive_timeout 5;
-                        root /app/dist;
-
-        location = /index.html {
-            add_header Cache-Control "no-store, no-cache";
-            add_header Strict-Transport-Security "max-age=31536002;";
-
-            try_files $uri $uri/ =404;
-        }
-
+                root /app/dist;
                 location / {
                         # Uncomment this if statement to force SSL/redirect http -> https
                         # if ($http_x_forwarded_proto != "https") {
