@@ -35,17 +35,25 @@ http {
                 listen <%= ENV["PORT"] %>;
                 server_name _;
                 keepalive_timeout 5;
+                root /app/dist;
 
-                location / {
-                        # Uncomment this if statement to force SSL/redirect http -> https
-                        # if ($http_x_forwarded_proto != "https") {
-                        #   return 301 https://$host$request_uri;
-                        # }
+        location = /index.html {
+            add_header Cache-Control "no-store, no-cache";
+            add_header Strict-Transport-Security "max-age=31536002;";
 
-                        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                        proxy_set_header Host $http_host;
-                        proxy_redirect off;
-                        proxy_pass http://app_server;
-                }
+            try_files $uri $uri/ =404;
+        }
+
+        location / {
+            add_header 'Cache-Control' "public, max-age=3600";
+            try_files $uri $uri/ /index.html;
+
+            # proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            # proxy_set_header Host $http_host;
+            # proxy_redirect off;
+            # proxy_pass http://app_server;
+        }
+
+
         }
 }
