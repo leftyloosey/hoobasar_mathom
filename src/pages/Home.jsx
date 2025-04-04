@@ -1,11 +1,19 @@
 import { Link } from 'react-router'
 
+import Header from '../components/Header'
+// import InView from '../components/InView'
+// import JO from './JO'
+
 const Home = () => {
   return (
-    <div>
-      <p className='text-red-500'>homeostasis</p>
-      <Link to='/jo'>JO</Link>
-    </div>
+    // <div>
+    //   <Header />
+
+    //   <div className=''>
+    //     <Link to='/jo'>JO</Link>
+    //   </div>
+    // </div>
+    <div>herm</div>
   )
 }
 
