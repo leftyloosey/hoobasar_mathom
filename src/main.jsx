@@ -6,7 +6,7 @@ import './index.css'
 import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import Stories from './pages/Stories.jsx'
-import JO from './pages/JO.jsx'
+import JO from './pages/folder_stories/JO.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

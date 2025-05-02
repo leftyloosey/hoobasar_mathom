@@ -1,19 +1,15 @@
 import { Link } from 'react-router'
+import backgroundVideo from '../assets/drone_short.mp4'
 
 import Header from '../components/Header'
-// import InView from '../components/InView'
-// import JO from './JO'
 
 const Home = () => {
   return (
-    // <div>
-    //   <Header />
-
-    //   <div className=''>
-    //     <Link to='/jo'>JO</Link>
-    //   </div>
-    // </div>
-    <div>herm</div>
+    <div className='pt-46 mt-6 md:pt-2'>
+      <video autoPlay playsInline muted loop id='video'>
+        <source src={backgroundVideo} type='video/mp4'></source>
+      </video>
+    </div>
   )
 }
 

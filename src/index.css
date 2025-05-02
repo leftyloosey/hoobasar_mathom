@@ -7,6 +7,20 @@
 }
 body {
   font-family: 'grotesk', sans-serif;
+  background: black;
+  overflow-x: hidden;
+}
+
+.slop {
+  overflow: hidden;
+}
+
+#video {
+  /* position: absolute; */
+  /* z-index: -1; */
+  width: 100vw;
+  /* width: 100%; */
+  /* height: 75%; */
 }
 
 .abstract-fade {
