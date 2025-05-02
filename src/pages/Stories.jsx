@@ -3,12 +3,26 @@ import { useOutletContext } from 'react-router'
 
 import StoryFrame from '../components/StoryFrame.jsx'
 
+import JO_abstract from '../assets/JO/JO_abstract.js'
+import house_front from '../assets/JO/house_front.JPG'
+import M_abstract from '../assets/M/M_abstract.js'
+import building_side from '../assets/M/building_side.JPG'
+
 const Stories = () => {
+  const JO_cover_style = {
+    height: '64px',
+    width: '32px',
+  }
+  const M_cover_style = {
+    height: '64px',
+    width: '64px',
+  }
+
   const [fadeOffElements, setFadeOffElements] = useState(false)
   const [storyLoad, setStoryLoad] = useOutletContext()
   console.log(storyLoad)
   const el = useRef(null)
-  const el2 = useRef(null)
+  // const el2 = useRef(null)
   useEffect(() => {
     setStoryLoad(true)
 
@@ -18,21 +32,20 @@ const Stories = () => {
   }, [setStoryLoad])
 
   return (
-    <div
-    // onLoad={() => {
-    //   setStoryLoad(true)
-    //   console.log(storyLoad)
-    // }}
-    >
+    <div>
       <StoryFrame
+        coverStyle={JO_cover_style}
+        abstract={JO_abstract}
+        coverPhoto={house_front}
         el={el}
-        el2={el2}
         fadeOffElements={fadeOffElements}
         setFadeOffElements={setFadeOffElements}
       />
       <StoryFrame
+        coverStyle={M_cover_style}
+        abstract={M_abstract}
+        coverPhoto={building_side}
         el={el}
-        el2={el2}
         fadeOffElements={fadeOffElements}
         setFadeOffElements={setFadeOffElements}
       />

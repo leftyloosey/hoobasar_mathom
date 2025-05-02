@@ -20,7 +20,7 @@ function App() {
   }
 
   return (
-    <div className='bg-white'>
+    <div className=''>
       <header>
         <Header />
         <div
@@ -47,7 +47,7 @@ function App() {
           </div>
         </div>
       </header>
-      <div className='h-[50vh] md:h-[80vh]'>
+      <div className='h-[50vh] md:h-[80vh] bg-white'>
         <Outlet context={[storyLoad, setStoryLoad]} />
       </div>
     </div>

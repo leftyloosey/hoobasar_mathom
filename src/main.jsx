@@ -7,6 +7,7 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import Stories from './pages/Stories.jsx'
 import JO from './pages/folder_stories/JO.jsx'
+import M from './pages/folder_stories/M.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/' element={<App />}>
           <Route index element={<Home />} />
           <Route path='/jo' element={<JO />} />
+          <Route path='/m' element={<M />} />
           <Route path='/stories' element={<Stories />} />
         </Route>
       </Routes>
