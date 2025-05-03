@@ -5,7 +5,9 @@ import Header from '../components/Header'
 
 const Home = () => {
   return (
-    <div className='pt-46 mt-6 md:pt-2'>
+    <div className='bg-white pt-46 md:pt-2 md:border-l-16 md:border-r-16'>
+      <div className='h-8'></div>
+
       <video autoPlay playsInline muted loop id='video'>
         <source src={backgroundVideo} type='video/mp4'></source>
       </video>

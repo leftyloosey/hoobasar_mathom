@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router'
 // import front_door from '../assets/JO/front_door.JPG'
 
 const StoryFrame = ({
+  storyID,
   coverStyle,
   abstract,
   coverPhoto,
@@ -14,7 +15,7 @@ const StoryFrame = ({
   fadeOffElements,
   setFadeOffElements,
 }) => {
-  let navigate = useNavigate()
+  const navigate = useNavigate()
 
   const handleClick = (e) => {
     e.preventDefault()
@@ -26,34 +27,42 @@ const StoryFrame = ({
         behavior: 'smooth',
       })
       setFadeOffElements(true)
-    }, '150')
+      e.target.style.visibility = 'hidden'
+    }, '500')
     setTimeout(() => {
       navigate(`/${e.target.id}`)
-    }, '600')
+    }, '1000')
   }
   return (
-    <div className={`flex flex-co  bg${fadeOffElements ? '' : ''}`}>
-      <div className='flex flex-col z-50 '>
+    <div
+      className={`bg-gray-50 mt-5 ml-5 mr-5 abstract-fade duration-200 z-40 transition-all ${
+        // fadeOffElements ? '' : ''
+        fadeOffElements ? 'opacity-0 ' : 'opacity-100'
+      }`}
+    >
+      <div className='p-4 flex flex-col md:flex-row '>
         <img
+          id={storyID}
+          onClick={(e) => {
+            // e.target.style.visibility = 'hidden'
+            handleClick(e)
+          }}
           style={coverStyle}
-          className={`w-32 h-64 translate-x-64 ${fadeOffElements ? '' : ''}`}
+          className={`p-2 shadow-2xl ${fadeOffElements ? '' : ''}`}
           src={coverPhoto}
           alt='house front'
         />
 
-        <div className='flex w-full '>
+        <div className='flex justify-center'>
           <div className={` ${fadeOffElements ? '' : ''}`}>
-            {/* <img
-            className={`w-32 h-32  ${fadeOffElements ? '' : ''}`}
-            src={house_front}
-            alt='house front'
-          /> */}
             <p
               ref={el}
-              id='jo'
-              className={`bg-white ${fadeOffElements ? '' : ''}`}
+              id={storyID}
+              className={`md:mt-16 md:ml-16 p-1 bg-black text-white w-80 md:w-66 shadow-md ${
+                fadeOffElements ? '' : ''
+              }`}
               onClick={(e) => {
-                e.target.style.visibility = 'hidden'
+                // e.target.style.visibility = 'hidden'
                 handleClick(e)
               }}
             >
@@ -62,7 +71,6 @@ const StoryFrame = ({
           </div>
         </div>
       </div>
-      <div className='w-1/2 h-32 opacity-10 bg-slate-300 absolute left-64 top-64 '></div>
     </div>
   )
 }

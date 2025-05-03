@@ -20,16 +20,16 @@ function App() {
   }
 
   return (
-    <div className=''>
+    <div className='bg-black'>
       <header>
         <Header />
         <div
-          className={`pl-2 pr-2 absolute right-2 top-2 font-bold text-2xl text-white bg-black duration-500 ${
+          className={`pl-2 pr-2 absolute right-2 top-1 rounded-full font-bold text-2xl text-white bg-black duration-500  ${
             toggleNav ? 'rotate-90' : ''
           }`}
           onClick={() => toggler()}
         >
-          <button>x</button>
+          <button>[]</button>
         </div>
         <div className=''>
           <div
@@ -47,7 +47,7 @@ function App() {
           </div>
         </div>
       </header>
-      <div className='h-[50vh] md:h-[80vh] bg-white'>
+      <div className='h-[50vh] md:h-[80vh]'>
         <Outlet context={[storyLoad, setStoryLoad]} />
       </div>
     </div>
