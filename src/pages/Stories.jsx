@@ -10,7 +10,7 @@ import { m, M_abstract, M_cover_style } from '../assets/M/M_constants.js'
 import building_side from '../assets/M/building_side.JPG'
 
 import { jh, JH_abstract, JH_cover_style } from '../assets/JH/JH_constants.js'
-import living_room from '../assets/JH/Living_room.JPG'
+import living_room from '../assets/JH/living_room.JPG'
 
 const Stories = () => {
   const [fadeOffElements, setFadeOffElements] = useState(false)
