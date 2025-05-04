@@ -39,7 +39,7 @@ const Stories = () => {
             : ''
         }`}
       >
-        <div className='flex flex-col h-full gap-y-72 md:gap-y-48 overflow-y-auto no-scrollbar'>
+        <div className='flex flex-col h-full gap-y-72 md:gap-y-36 overflow-y-auto no-scrollbar'>
           <StoryFrame
             storyID={jh}
             coverStyle={JH_cover_style}

@@ -29,7 +29,7 @@ const StoryFrame = ({
   }
   return (
     <div
-      className={`bg-gray-50 mt-5 ml-5 mr-5 abstract-fade duration-200 z-40 transition-all ${
+      className={`bg-gray-50 mt-6 mb-6 ml-5 mr-5 abstract-fade duration-200 z-40 transition-all ${
         // fadeOffElements ? '' : ''
         fadeOffElements ? 'opacity-0 ' : 'opacity-100'
       }`}
