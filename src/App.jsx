@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router'
 import { Outlet } from 'react-router'
 
 import Header from './components/Header'
@@ -42,7 +41,6 @@ function App() {
               storyLoad={storyLoad}
               setStoryLoad={setStoryLoad}
               toggleNav={toggleNav}
-              // hideExcess={hideExcess}
             />
           </div>
         </div>

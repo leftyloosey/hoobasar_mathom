@@ -1,20 +1,6 @@
-// import { useState } from 'react'
-// import { useRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 import ReactAudioPlayer from 'react-audio-player'
-// import ModalImage from 'react-modal-image'
-
-// import M_talking from '../../assets/JO/JO_talking.wav'
-// import { M_abstract } from '../../assets/M/M_constants.js'
-
-// import front_door from '../../assets/M/front_door.JPG'
-// import u_courtyard from '../../assets/M/u_courtyard.JPG'
-// import building_side from '../../assets/M/building_side.JPG'
-// import vent from '../../assets/M/vent.JPG'
-// import stove from '../../assets/M/stove.JPG'
 import SideMenu from './SideMenu.jsx'
-
-// const photoRay = [front_door, u_courtyard, building_side, vent, stove]
 
 const StoryPage = ({ abstract, audio, photoRay }) => {
   const InView = () => {

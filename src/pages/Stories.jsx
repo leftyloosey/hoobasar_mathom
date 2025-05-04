@@ -39,7 +39,17 @@ const Stories = () => {
             : ''
         }`}
       >
-        <div className='flex flex-col h-full md:gap-y-64 overflow-y-auto no-scrollbar'>
+        <div className='flex flex-col h-full gap-y-72 md:gap-y-48 overflow-y-auto no-scrollbar'>
+          <StoryFrame
+            storyID={jh}
+            coverStyle={JH_cover_style}
+            coverPhoto={living_room}
+            abstract={JH_abstract}
+            el={el}
+            fadeOffElements={fadeOffElements}
+            setFadeOffElements={setFadeOffElements}
+          />
+
           <StoryFrame
             storyID={jo}
             coverStyle={JO_cover_style}
@@ -55,16 +65,6 @@ const Stories = () => {
             coverStyle={M_cover_style}
             coverPhoto={building_side}
             abstract={M_abstract}
-            el={el}
-            fadeOffElements={fadeOffElements}
-            setFadeOffElements={setFadeOffElements}
-          />
-
-          <StoryFrame
-            storyID={jh}
-            coverStyle={JH_cover_style}
-            coverPhoto={living_room}
-            abstract={JH_abstract}
             el={el}
             fadeOffElements={fadeOffElements}
             setFadeOffElements={setFadeOffElements}

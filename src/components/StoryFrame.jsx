@@ -1,11 +1,5 @@
 import { useNavigate } from 'react-router'
 
-// import JO_abstract from '../assets/JO/JO_abstract.js'
-// import house_front from '../assets/JO/house_front.JPG'
-// import M_abstract from '../assets/JO/JO_abstract.js'
-// import building_side from '../assets/M/building_side.JPG'
-// import front_door from '../assets/JO/front_door.JPG'
-
 const StoryFrame = ({
   storyID,
   coverStyle,
@@ -40,7 +34,7 @@ const StoryFrame = ({
         fadeOffElements ? 'opacity-0 ' : 'opacity-100'
       }`}
     >
-      <div className='p-4 flex flex-col md:flex-row '>
+      <div className='p-4 flex flex-col md:flex-row md:h-96 md:w-auto'>
         <img
           id={storyID}
           onClick={(e) => {
