@@ -34,7 +34,7 @@ const StoryPage = ({ abstract, audio, photoRay }) => {
             <SideMenu photoRay={photoRay} />
           </div>
 
-          <div ref={ref} className='invisible w-0'>
+          <div ref={ref} className='invisible w-0 mt-4'>
             <h2>{`inside viewport ${inView}.`}</h2>
           </div>
           <div className='flex flex-col justify-center'>

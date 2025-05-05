@@ -5,9 +5,9 @@ const Sidebar = ({ toggleNav, storyLoad }) => {
   return (
     <div
       className={`flex flex-row duration-500 z-50 ${
-        toggleNav ? 'gap-x-16' : 'text-white -translate-x-16 gap-x-96'
+        toggleNav ? 'gap-x-16 pr-1.5' : 'text-white -translate-x-16 gap-x-96'
       }
-      //  ${storyLoad ? 'md:-translate-x-72' : ''}  
+      //  ${storyLoad ? 'md:-translate-x-72 md:mr-3' : ''}  
       //  ${storyLoad ? ' ' : ''}  
        ${storyLoad && !toggleNav ? 'gap-x-96 opacity-0' : ''}  `}
     >
