@@ -18,7 +18,6 @@ const Stories = () => {
   // const [borderWidthLoad, setBorderWidthLoad] = useState(false)
   console.log(storyLoad)
   const el = useRef(null)
-  // const el2 = useRef(null)
   useEffect(() => {
     setStoryLoad(true)
     // setTimeout(() => {
@@ -30,48 +29,41 @@ const Stories = () => {
   }, [setStoryLoad])
 
   return (
-    <div className='flex justify-center w-full'>
+    <div className='pt-1'>
       <div
-        className={`justify-center bg-white md:w-[60vw] overflow-y-auto h-[60vh] duration-700 
-        ${
-          fadeOffElements
-            ? 'w-[120vh] md:w-[190vh] border-r-32 border-l-32 border-black'
-            : ''
-        }`}
+        className={`flex flex-col gap-y-40 overflow-y-auto h-[71vh] pb-32
+        ${fadeOffElements ? '' : ''}`}
       >
-        <div className='flex flex-col h-full gap-y-72 md:gap-y-36 overflow-y-auto no-scrollbar'>
-          <StoryFrame
-            storyID={jh}
-            coverStyle={JH_cover_style}
-            coverPhoto={living_room}
-            abstract={JH_abstract}
-            el={el}
-            fadeOffElements={fadeOffElements}
-            setFadeOffElements={setFadeOffElements}
-          />
+        <StoryFrame
+          storyID={jh}
+          coverStyle={JH_cover_style}
+          coverPhoto={living_room}
+          abstract={JH_abstract}
+          el={el}
+          fadeOffElements={fadeOffElements}
+          setFadeOffElements={setFadeOffElements}
+        />
 
-          <StoryFrame
-            storyID={jo}
-            coverStyle={JO_cover_style}
-            coverPhoto={house_front}
-            abstract={JO_abstract}
-            el={el}
-            fadeOffElements={fadeOffElements}
-            setFadeOffElements={setFadeOffElements}
-          />
+        <StoryFrame
+          storyID={jo}
+          coverStyle={JO_cover_style}
+          coverPhoto={house_front}
+          abstract={JO_abstract}
+          el={el}
+          fadeOffElements={fadeOffElements}
+          setFadeOffElements={setFadeOffElements}
+        />
 
-          <StoryFrame
-            storyID={m}
-            coverStyle={M_cover_style}
-            coverPhoto={building_side}
-            abstract={M_abstract}
-            el={el}
-            fadeOffElements={fadeOffElements}
-            setFadeOffElements={setFadeOffElements}
-          />
-        </div>
+        <StoryFrame
+          storyID={m}
+          coverStyle={M_cover_style}
+          coverPhoto={building_side}
+          abstract={M_abstract}
+          el={el}
+          fadeOffElements={fadeOffElements}
+          setFadeOffElements={setFadeOffElements}
+        />
       </div>
-      {/* </div> */}
     </div>
   )
 }

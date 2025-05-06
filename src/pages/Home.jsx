@@ -1,15 +1,37 @@
 import { Link } from 'react-router'
-import backgroundVideo from '../assets/drone_short.mp4'
-
-import Header from '../components/Header'
+import DetectScreen from '../components/DetectScreen'
+import droneLarge from '../assets/drone_footage/drone_short.mp4'
+// import droneMobileAspect from '../assets/drone_footage/drone_mobile_aspect.mp4'
 
 const Home = () => {
-  return (
-    <div className='bg-white pt-46 md:pt-2 border-black md:border-l-16 md:border-r-16'>
-      <div className='h-8'></div>
+  let height
+  if (DetectScreen().width < 640) {
+    height = 71 + 'vh'
+  } else {
+    height = 100 + 'vh'
+  }
 
-      <video autoPlay playsInline muted loop id='video'>
-        <source src={backgroundVideo} type='video/mp4'></source>
+  return (
+    <div className=''>
+      <div className='bg-white h-8'></div>
+
+      <video
+        style={{
+          // position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: height,
+          objectFit: 'cover',
+          zIndex: -1000,
+        }}
+        autoPlay
+        playsInline
+        muted
+        loop
+        // id='video'
+      >
+        <source src={droneLarge} type='video/mp4'></source>
       </video>
     </div>
   )

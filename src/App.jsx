@@ -3,6 +3,7 @@ import { Outlet } from 'react-router'
 
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
+import Home from './pages/Home'
 
 import './App.css'
 
@@ -19,7 +20,7 @@ function App() {
   }
 
   return (
-    <div className='bg-black'>
+    <div className=''>
       <header>
         <Header />
         <div
@@ -45,7 +46,7 @@ function App() {
           </div>
         </div>
       </header>
-      <div className='h-[50vh] md:h-[80vh]'>
+      <div className='bg-white pt-6 abstract-fade'>
         <Outlet context={[storyLoad, setStoryLoad]} />
       </div>
     </div>

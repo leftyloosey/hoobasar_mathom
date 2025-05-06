@@ -28,13 +28,8 @@ const StoryFrame = ({
     }, '1000')
   }
   return (
-    <div
-      className={`bg-gray-50 mt-6 mb-6 ml-5 mr-5 abstract-fade duration-200 z-40 transition-all ${
-        // fadeOffElements ? '' : ''
-        fadeOffElements ? 'opacity-0 ' : 'opacity-100'
-      }`}
-    >
-      <div className='p-4 flex flex-col md:flex-row md:h-96 md:w-auto'>
+    <div className={`bg-gray-50 flex flex-col  ${fadeOffElements ? '' : ''}`}>
+      <div className='flex flex-col justify-center p-1 gap-y-2'>
         <img
           id={storyID}
           onClick={(e) => {
@@ -42,19 +37,17 @@ const StoryFrame = ({
             handleClick(e)
           }}
           style={coverStyle}
-          className={`p-2 shadow-2xl ${fadeOffElements ? '' : ''}`}
+          className={`shadow-2xl ${fadeOffElements ? '' : ''}`}
           src={coverPhoto}
           alt='house front'
         />
 
-        <div className='flex justify-center'>
+        <div className=''>
           <div className={` ${fadeOffElements ? '' : ''}`}>
             <p
               ref={el}
               id={storyID}
-              className={`md:mt-16 md:ml-16 p-1 bg-black text-white w-80 md:w-66 shadow-md ${
-                fadeOffElements ? '' : ''
-              }`}
+              className={`bg-black text-white p-4 ${fadeOffElements ? '' : ''}`}
               onClick={(e) => {
                 // e.target.style.visibility = 'hidden'
                 handleClick(e)
