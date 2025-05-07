@@ -26,7 +26,7 @@ const StoryPage = ({ abstract, audio, photoRay }) => {
         >
           <div className='bg-white flex justify-center'>
             <div
-              className={`mt-8 w-3/4 text-xl shadow-md duration-500 ${
+              className={`mt-8 w-5/6 text-xl p-4 shadow-md duration-500 ${
                 inView ? 'translate-y-24' : ''
               }`}
             >
