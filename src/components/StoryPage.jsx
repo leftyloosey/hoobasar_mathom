@@ -5,8 +5,7 @@ import { useEffect, useState } from 'react'
 
 const StoryPage = ({ abstract, audio, photoRay }) => {
   const InView = () => {
-    // eslint-disable-next-line
-    const { ref, inView, entry, rootMargin } = useInView({
+    const { ref, inView } = useInView({
       threshold: 0,
       initialInView: false,
       rootMargin: '100% 0% 0% 0%',
@@ -22,8 +21,7 @@ const StoryPage = ({ abstract, audio, photoRay }) => {
       <div className='bg-white'>
         <div
           className={`flex flex-col duration-500  ${
-            // bringUp ? 'h-[50vh]' : 'h-[71vh]'
-            bringUp ? 'h-[40vh]' : 'h-[0vh]'
+            bringUp ? 'h-[50vh]' : 'h-[71vh]'
           }`}
         >
           <div className='bg-white flex justify-center'>
@@ -35,7 +33,7 @@ const StoryPage = ({ abstract, audio, photoRay }) => {
               {abstract}
             </div>
           </div>
-          <div className='bg-white pb-48 h-8 duration700'></div>
+          <div className='bg-white pb-48 h-8 duration-500'></div>
           <div
             className={`bg-white transition-opacity ease-in-out duration-500 ${
               inView ? '' : 'opacity-0'
@@ -44,7 +42,7 @@ const StoryPage = ({ abstract, audio, photoRay }) => {
             <div className='bg-white duration-500'>
               <SideMenu photoRay={photoRay} />
             </div>
-            <div ref={ref} className='invisible  w-0'>
+            <div ref={ref} className='invisible w-0'>
               <h2>{`inside viewport ${inView}.`}</h2>
             </div>
             <div className='flex justify-center mt-24 mb-8'>
