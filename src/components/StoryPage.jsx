@@ -26,15 +26,15 @@ const StoryPage = ({ abstract, audio, photoRay }) => {
         >
           <div
             className={`bg-white flex justify-center duration-500 h-[50vh] ${
-              inView ? 'translate-y-24' : 'shadow-md'
+              inView ? 'translate-y-24' : ''
             }`}
           >
-            <div className={`mt-8 w-5/6 text-xl p-4   `}>{abstract}</div>
+            <div className={`mt-8 w-5/6 text-xl p-4`}>{abstract}</div>
           </div>
           <div className='bg-white pb-48 h-8 duration-500'></div>
           <div
-            className={`bg-white transition-opacity ease-in-out duration-500 ${
-              inView ? '' : 'opacity-0'
+            className={` transition-opacity ease-in-out duration-500 ${
+              inView ? 'bg-white' : 'opacity-0 bg-black'
             }`}
           >
             <div className='bg-white duration-500'>

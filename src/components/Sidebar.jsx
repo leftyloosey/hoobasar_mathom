@@ -16,14 +16,14 @@ const Sidebar = ({ toggleNav, storyLoad }) => {
       </div>
 
       <div>
-        <Link className='hover:bg-black hover:text-white' to='/stories'>
-          Option
+        <Link className='hover:bg-black hover:text-white' to='/project'>
+          Project
         </Link>
       </div>
 
       <div>
-        <Link className='hover:bg-black hover:text-white' to='/stories'>
-          Option
+        <Link className='hover:bg-black hover:text-white' to='/resources'>
+          Resources
         </Link>
       </div>
     </div>
