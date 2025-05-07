@@ -28,7 +28,7 @@ const StoryFrame = ({
       })
       setFadeOffElements(true)
       // e.target.style.visibility = 'hidden'
-    }, '500')
+    }, '400')
     setTimeout(() => {
       navigate(`/${e.target.id}`)
     }, '1000')

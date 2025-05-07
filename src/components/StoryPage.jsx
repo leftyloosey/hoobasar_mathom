@@ -24,14 +24,12 @@ const StoryPage = ({ abstract, audio, photoRay }) => {
             bringUp ? 'h-[50vh]' : 'h-[71vh]'
           }`}
         >
-          <div className='bg-white flex justify-center'>
-            <div
-              className={`mt-8 w-5/6 text-xl p-4 shadow-md duration-500 ${
-                inView ? 'translate-y-24' : ''
-              }`}
-            >
-              {abstract}
-            </div>
+          <div
+            className={`bg-white flex justify-center duration-500 h-[50vh] ${
+              inView ? 'translate-y-24' : 'shadow-md'
+            }`}
+          >
+            <div className={`mt-8 w-5/6 text-xl p-4   `}>{abstract}</div>
           </div>
           <div className='bg-white pb-48 h-8 duration-500'></div>
           <div
