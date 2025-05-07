@@ -29,10 +29,10 @@ const Stories = () => {
   }, [setStoryLoad])
 
   return (
-    <div className='pt-1 short-abstract-fade'>
+    <div className='short-abstract-fade bg-black'>
       <div
-        className={`flex flex-col gap-y-40 overflow-y-auto h-[71vh] pb-24
-        ${fadeOffElements ? '' : ''}`}
+        className={`flex flex-col gap-y-32 overflow-y-auto h-[71vh] p-16 
+        ${fadeOffElements ? 'hidden' : ''}`}
       >
         <StoryFrame
           storyID={jh}

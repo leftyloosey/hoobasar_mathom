@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 const Sidebar = ({ toggleNav, storyLoad }) => {
   return (
     <div
-      className={`flex flex-row pt-1 duration-300 z-50 ${
+      className={`flex flex-row pt-1 duration-300 z50 ${
         toggleNav ? 'gap-x-16 pr-1.5' : 'text-white -translate-x-16 gap-x-96'
       }
        ${storyLoad ? 'md:-translate-x-72 md:mr-3' : ''}  

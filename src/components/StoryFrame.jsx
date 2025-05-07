@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router'
+import { useInView } from 'react-intersection-observer'
 
 const StoryFrame = ({
   storyID,
@@ -9,62 +10,81 @@ const StoryFrame = ({
   fadeOffElements,
   setFadeOffElements,
 }) => {
-  const navigate = useNavigate()
+  const InView = () => {
+    const { ref, inView } = useInView({
+      rootMargin: '-10px 0px -50px 0px',
+      // rootMargin: '100% 0% -30% 0%',
 
-  const handleClick = (e) => {
-    e.preventDefault()
+      threshold: 0.4,
+      initialInView: true,
+    })
+    const navigate = useNavigate()
 
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-      })
-      setFadeOffElements(true)
-      e.target.style.visibility = 'hidden'
-    }, '500')
-    setTimeout(() => {
-      navigate(`/${e.target.id}`)
-    }, '1000')
-  }
-  return (
-    <div
-      className={`bg-gray-50 flex flex-col duration-500 ${
-        fadeOffElements ? 'opacity-0' : 'opacity-100'
-      }`}
-    >
-      <div className='flex flex-col justify-center p-1 gap-y-9'>
-        <img
-          id={storyID}
-          onClick={(e) => {
-            // e.target.style.visibility = 'hidden'
-            handleClick(e)
-          }}
-          style={coverStyle}
-          className={`shadow-2xl ${fadeOffElements ? '' : ''}`}
-          src={coverPhoto}
-          alt='house front'
-        />
+    const handleClick = (e) => {
+      e.preventDefault()
 
-        <div className=''>
-          <div className={` ${fadeOffElements ? '' : ''}`}>
-            <p
-              ref={el}
-              id={storyID}
-              className={`bg-black text-white p-4 shadow-md ${
-                fadeOffElements ? '' : ''
-              }`}
-              onClick={(e) => {
-                // e.target.style.visibility = 'hidden'
-                handleClick(e)
-              }}
-            >
-              {abstract}
-            </p>
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth',
+        })
+        setFadeOffElements(true)
+        e.target.style.visibility = 'hidden'
+      }, '500')
+      setTimeout(() => {
+        navigate(`/${e.target.id}`)
+      }, '1000')
+    }
+
+    return (
+      <div
+        ref={ref}
+        className={`bg-gray-50 flex flex-col duration-500 opacity-0 mt-4 ${
+          fadeOffElements ? '' : ''
+          // fadeOffElements ? 'opacity-0' : 'opacity-100'
+        }
+        ${inView ? 'opacity-100' : ''}
+        }`}
+      >
+        <div className='flex flex-col justify-center p-1 gap-y-4'>
+          <img
+            id={storyID}
+            onClick={(e) => {
+              // e.target.style.visibility = 'hidden'
+              handleClick(e)
+            }}
+            style={coverStyle}
+            className={`shadow-2xl  ${fadeOffElements ? '' : ''}`}
+            src={coverPhoto}
+            alt='house front'
+          />
+
+          <div className=''>
+            <div className={` ${fadeOffElements ? '' : ''}`}>
+              <p
+                ref={el}
+                id={storyID}
+                className={`bg-black text-white p-4 w-full shadow-md ${
+                  fadeOffElements ? '' : ''
+                }`}
+                onClick={(e) => {
+                  // e.target.style.visibility = 'hidden'
+                  handleClick(e)
+                }}
+              >
+                {abstract}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    )
+  }
+  return (
+    <>
+      <InView />
+    </>
   )
 }
 
