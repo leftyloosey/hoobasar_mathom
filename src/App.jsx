@@ -46,7 +46,7 @@ function App() {
           </div>
         </div>
       </header>
-      <div className='bg-white pt-6 abstract-fade'>
+      <div className='bg-white pt-6'>
         <Outlet context={[storyLoad, setStoryLoad]} />
       </div>
     </div>

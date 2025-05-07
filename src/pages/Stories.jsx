@@ -29,9 +29,9 @@ const Stories = () => {
   }, [setStoryLoad])
 
   return (
-    <div className='pt-1'>
+    <div className='pt-1 short-abstract-fade'>
       <div
-        className={`flex flex-col gap-y-40 overflow-y-auto h-[71vh] pb-32
+        className={`flex flex-col gap-y-40 overflow-y-auto h-[71vh] pb-24
         ${fadeOffElements ? '' : ''}`}
       >
         <StoryFrame

@@ -28,8 +28,12 @@ const StoryFrame = ({
     }, '1000')
   }
   return (
-    <div className={`bg-gray-50 flex flex-col  ${fadeOffElements ? '' : ''}`}>
-      <div className='flex flex-col justify-center p-1 gap-y-2'>
+    <div
+      className={`bg-gray-50 flex flex-col duration-500 ${
+        fadeOffElements ? 'opacity-0' : 'opacity-100'
+      }`}
+    >
+      <div className='flex flex-col justify-center p-1 gap-y-9'>
         <img
           id={storyID}
           onClick={(e) => {
@@ -47,7 +51,9 @@ const StoryFrame = ({
             <p
               ref={el}
               id={storyID}
-              className={`bg-black text-white p-4 ${fadeOffElements ? '' : ''}`}
+              className={`bg-black text-white p-4 shadow-md ${
+                fadeOffElements ? '' : ''
+              }`}
               onClick={(e) => {
                 // e.target.style.visibility = 'hidden'
                 handleClick(e)
