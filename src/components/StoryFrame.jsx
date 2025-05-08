@@ -11,7 +11,7 @@ const StoryFrame = ({
   setFadeOffElements,
 }) => {
   const { ref, inView } = useInView({
-    rootMargin: '10px 0px -35px 0px',
+    rootMargin: '-10px 0px 20px 0px',
     threshold: 0.5,
     initialInView: false,
   })
@@ -37,7 +37,7 @@ const StoryFrame = ({
   return (
     <div
       ref={ref}
-      className={`bg-gray-50 flex flex-col duration-500 opacity-0  ${
+      className={`bg-gray-50 flex flex-col duration-500 opacity-0 abstract-fade  ${
         fadeOffElements ? '' : ''
       }
         ${inView ? 'opacity-100' : ''}
