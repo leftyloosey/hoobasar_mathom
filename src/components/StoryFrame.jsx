@@ -11,8 +11,8 @@ const StoryFrame = ({
   setFadeOffElements,
 }) => {
   const { ref, inView } = useInView({
-    rootMargin: '-10px 0px 20px 0px',
-    threshold: 0.5,
+    rootMargin: '0px 0px 0px 0px',
+    threshold: 0.1,
     initialInView: false,
   })
   const navigate = useNavigate()
@@ -36,14 +36,13 @@ const StoryFrame = ({
 
   return (
     <div
-      ref={ref}
       className={`bg-gray-50 flex flex-col duration-500 opacity-0 abstract-fade  ${
         fadeOffElements ? '' : ''
       }
         ${inView ? 'opacity-100' : ''}
         }`}
     >
-      <div className='flex flex-col justify-center p-1 gap-y-2'>
+      <div ref={ref} className='flex flex-col justify-center p-1 gap-y-2'>
         <img
           id={storyID}
           onClick={(e) => {

@@ -32,7 +32,7 @@ const Stories = () => {
     // <div>
     <div className=''>
       <div
-        className={`bg-white flex flex-col gap-y-28 overflow-y-auto h-[71vh] p-16 duration-700 
+        className={`bg-white flex flex-col gap-y-64 overflow-y-auto h-[71vh] p-16 duration-700 
         ${fadeOffElements ? 'opacity-0' : 'opacity-100'}`}
       >
         <StoryFrame
