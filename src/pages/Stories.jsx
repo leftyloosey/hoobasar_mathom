@@ -36,6 +36,16 @@ const Stories = () => {
         ${fadeOffElements ? 'opacity-0' : 'opacity-100'}`}
       >
         <StoryFrame
+          storyID={m}
+          coverStyle={M_cover_style}
+          coverPhoto={building_side}
+          abstract={M_abstract}
+          el={el}
+          fadeOffElements={fadeOffElements}
+          setFadeOffElements={setFadeOffElements}
+        />
+
+        <StoryFrame
           storyID={jh}
           coverStyle={JH_cover_style}
           coverPhoto={living_room}
@@ -50,16 +60,6 @@ const Stories = () => {
           coverStyle={JO_cover_style}
           coverPhoto={house_front}
           abstract={JO_abstract}
-          el={el}
-          fadeOffElements={fadeOffElements}
-          setFadeOffElements={setFadeOffElements}
-        />
-
-        <StoryFrame
-          storyID={m}
-          coverStyle={M_cover_style}
-          coverPhoto={building_side}
-          abstract={M_abstract}
           el={el}
           fadeOffElements={fadeOffElements}
           setFadeOffElements={setFadeOffElements}

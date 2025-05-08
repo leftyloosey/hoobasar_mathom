@@ -20,7 +20,7 @@ const StoryPage = ({ abstract, audio, photoRay }) => {
     return (
       <div className='bg-white'>
         <div
-          className={`flex flex-col duration-500  ${
+          className={`flex flex-col duration-100  ${
             bringUp ? 'h-[50vh]' : 'h-[71vh]'
           }`}
         >
