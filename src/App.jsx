@@ -10,9 +10,9 @@ function App() {
   const [toggleNav, setToggleNav] = useState(false)
   const [hideExcess, setHideExcess] = useState(false)
   const [storyLoad, setStoryLoad] = useState(false)
-  const toggler = () => {
+  const toggler = (toggleNav, setToggleNav, hideExcess, setHideExcess) => {
     setToggleNav(!toggleNav)
-    console.log(toggleNav)
+
     setTimeout(() => {
       setHideExcess(!hideExcess)
     }, 50)
@@ -26,7 +26,9 @@ function App() {
           className={`pl-2 pr-2 absolute right-2 top-1 rounded-full font-bold text-2xl text-white bg-black duration-500  ${
             toggleNav ? 'rotate-90' : ''
           }`}
-          onClick={() => toggler()}
+          onClick={() =>
+            toggler(toggleNav, setToggleNav, hideExcess, setHideExcess)
+          }
         >
           <button>[]</button>
         </div>
@@ -42,6 +44,10 @@ function App() {
               storyLoad={storyLoad}
               setStoryLoad={setStoryLoad}
               toggleNav={toggleNav}
+              setToggleNav={setToggleNav}
+              hideExcess={hideExcess}
+              setHideExcess={setHideExcess}
+              toggler={toggler}
             />
           </div>
         </div>

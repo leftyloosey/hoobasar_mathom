@@ -1,6 +1,13 @@
 import { Link } from 'react-router'
 
-const Sidebar = ({ toggleNav, storyLoad }) => {
+const Sidebar = ({
+  toggleNav,
+  setToggleNav,
+  toggler,
+  storyLoad,
+  hideExcess,
+  setHideExcess,
+}) => {
   return (
     <div
       className={`flex flex-row pt-1 duration-300 z50 ${
@@ -9,19 +16,31 @@ const Sidebar = ({ toggleNav, storyLoad }) => {
        ${storyLoad ? 'md:-translate-x-72 md:mr-3' : ''}  
        ${storyLoad && !toggleNav ? 'gap-x-96 opacity-0' : ''}  `}
     >
-      <div>
+      <div
+        onClick={() =>
+          toggler(toggleNav, setToggleNav, hideExcess, setHideExcess)
+        }
+      >
         <Link className='hover:bg-black hover:text-white' to='/stories'>
           Stories
         </Link>
       </div>
 
-      <div>
+      <div
+        onClick={() =>
+          toggler(toggleNav, setToggleNav, hideExcess, setHideExcess)
+        }
+      >
         <Link className='hover:bg-black hover:text-white' to='/project'>
           Project
         </Link>
       </div>
 
-      <div>
+      <div
+        onClick={() =>
+          toggler(toggleNav, setToggleNav, hideExcess, setHideExcess)
+        }
+      >
         <Link className='hover:bg-black hover:text-white' to='/resources'>
           Resources
         </Link>
