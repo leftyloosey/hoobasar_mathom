@@ -12,7 +12,7 @@ const StoryFrame = ({
 }) => {
   const { ref, inView } = useInView({
     rootMargin: '0px 0px -50px 0px',
-    threshold: 0.2,
+    threshold: 0.4,
     initialInView: false,
   })
   const nullStyle = {
