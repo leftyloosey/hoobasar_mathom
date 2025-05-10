@@ -8,7 +8,7 @@ import living_room from '../../assets/JH/living_room.JPG'
 import coffee from '../../assets/JH/coffee.JPG'
 import mitts from '../../assets/JH/mitts.JPG'
 
-const photoRay = [coffee, mitts, inside_door, living_room]
+const photoRay = [living_room, coffee, mitts, inside_door]
 
 const JH = () => {
   return (

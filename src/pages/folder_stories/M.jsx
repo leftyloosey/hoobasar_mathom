@@ -9,7 +9,7 @@ import front_door from '../../assets/M/front_door.JPG'
 import vent from '../../assets/M/vent.JPG'
 import u_courtyard from '../../assets/M/u_courtyard.JPG'
 
-const photoRay = [front_door, vent, stove, building_side, u_courtyard]
+const photoRay = [u_courtyard, front_door, vent, stove, building_side]
 const M = () => {
   return (
     <>

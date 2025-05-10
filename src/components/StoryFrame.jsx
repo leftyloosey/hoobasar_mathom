@@ -7,14 +7,18 @@ const StoryFrame = ({
   abstract,
   coverPhoto,
   // el,
-  fadeOffElements,
-  setFadeOffElements,
+  // fadeOffElements,
+  // setFadeOffElements,
 }) => {
   const { ref, inView } = useInView({
     rootMargin: '0px 0px -50px 0px',
     threshold: 0.5,
     initialInView: false,
   })
+  const nullStyle = {
+    backgroundColor: 'white',
+  }
+
   const navigate = useNavigate()
 
   const handleClick = (e) => {
@@ -26,7 +30,7 @@ const StoryFrame = ({
         left: 0,
         behavior: 'smooth',
       })
-      setFadeOffElements(true)
+      // setFadeOffElements(true)
       // e.target.style.visibility = 'hidden'
     }, '400')
     setTimeout(() => {
@@ -37,34 +41,27 @@ const StoryFrame = ({
   return (
     <div
       ref={ref}
-      className={`bg-gray-50 flex flex-col duration-500 opacity-0 abstract-fade  ${
-        fadeOffElements ? '' : ''
-      }
+      className={`bg-gray-50 flex flex-col duration-500 opacity-0 abstract-fade  
         ${inView ? 'opacity-100' : ''}
         }`}
     >
-      <div className='flex flex-col justify-center p-1 gap-y-2'>
+      <div className='flex flex-col md:flex-row md:gap-x-12 lg:gap-x-32 sm:items-center justify-center p-1 gap-y-2'>
         <img
           id={storyID}
           onClick={(e) => {
             handleClick(e)
           }}
-          style={coverStyle}
-          className={`shadow-2xl  ${fadeOffElements ? '' : ''}`}
+          style={coverStyle ? coverStyle : nullStyle}
+          className='shadow-2xl h-72 w-auto'
           src={coverPhoto}
           alt='house front'
         />
-        {/* <div className='h-0 invisible w-0' ref={ref}>
-          <h2>{`${inView}.`}</h2>
-        </div> */}
+
         <div className=''>
-          <div className={` ${fadeOffElements ? '' : ''}`}>
+          <div>
             <p
-              // ref={el}
               id={storyID}
-              className={`bg-black text-white p-4 w-full shadow-md ${
-                fadeOffElements ? '' : ''
-              }`}
+              className='bg-black text-white p-4 w-full shadow-md'
               onClick={(e) => {
                 handleClick(e)
               }}

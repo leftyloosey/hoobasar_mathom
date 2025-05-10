@@ -10,22 +10,24 @@ import kitchen_table from '../../assets/JO/kitchen_table.JPG'
 import living_room_plan from '../../assets/JO/living_room_plan.jpg'
 
 const photoRay = [
+  // living_room_plan,
   front_door,
-  living_room_plan,
   house_front,
   suburb,
   kitchen_table,
 ]
-const JO = () => {
+
+const TryJH = () => {
   return (
     <>
       <StoryPage
         abstract={JO_abstract}
         audio={JO_talking}
         photoRay={photoRay}
+        livingRoomPlan={living_room_plan}
       />
     </>
   )
 }
 
-export default JO
+export default TryJH

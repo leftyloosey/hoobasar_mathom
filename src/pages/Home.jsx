@@ -12,7 +12,7 @@ const Home = () => {
   }
 
   return (
-    <div className=''>
+    <div className='transition-opacity ease-in-out duration-500'>
       <div className='bg-white h-8'></div>
 
       <video

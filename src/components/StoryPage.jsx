@@ -1,71 +1,104 @@
-import { useInView } from 'react-intersection-observer'
 import ReactAudioPlayer from 'react-audio-player'
 import SideMenu from './SideMenu.jsx'
+import ModalImage from 'react-modal-image'
+
 import { useEffect, useState } from 'react'
 
-const StoryPage = ({ abstract, audio, photoRay }) => {
-  const InView = () => {
-    const { ref, inView } = useInView({
-      threshold: 0.1,
-      initialInView: false,
-      rootMargin: '100% 0% 0% 0%',
-      // rootMargin: '50px 0px 10px 0px',
-    })
-    const [bringUp, setBringUp] = useState(false)
+const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
+  //   const [storyGalleryWide, setstoryGalleryWide] = useState(false)
+  const [width, setWidth] = useState(window.innerWidth)
+  const [hoverer, setHoverer] = useState(photoRay[0])
 
-    useEffect(() => {
-      setBringUp(true)
-    }, [])
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
-    return (
-      <div className='bg-white'>
-        <div
-          className={`flex flex-col duration-100  ${
-            bringUp ? 'h-[50vh]' : 'h-[71vh]'
-          }`}
-        >
-          <div
-            className={`bg-white flex justify-center duration-500 h-[50vh] z-50 ${
-              inView ? 'translate-y-64' : ''
-            }`}
-          >
-            <div className={`mt-8 w-5/6 text-xl p-4 mb-16 duration-500`}>
-              {abstract}
+  return (
+    <div className='bg-white pb-8 md:h-[170vh] lg:h-[80vh] short-abstract-fade'>
+      <div className='flex flex-col pl-1 pr-1'>
+        <div className='flex justify-center'>
+          <div className={`mt-8 w-5/6 text-xl p-4 mb-1`}>{abstract}</div>
+        </div>
+
+        <div className=''>
+          {/* <div className='transition-opacity ease-in-out duration-500'> */}
+          {width > 640 ? (
+            <div className='flex flex-row justify-center md:gap-x-4 lg:gap-x-20 h-[80vh]'>
+              <div className='flex flex-col'>
+                <div className='flex mb-8 justify-center mt-4'>
+                  <ReactAudioPlayer className='w-[30vw]' src={audio} controls />
+                </div>
+                {livingRoomPlan ? (
+                  <div className='flex flex-row'>
+                    <img
+                      className='h-32 w-auto -mt-2.5'
+                      src={livingRoomPlan}
+                      onLoad={() => setHoverer(livingRoomPlan)}
+                      onMouseEnter={() => setHoverer(livingRoomPlan)}
+                      onMouseLeave={() => setHoverer(livingRoomPlan)}
+                      alt=''
+                    />
+                    <div className='flex flex-row gap-x-2 h-48 w-96'>
+                      {photoRay.map((photo, index) => (
+                        <div
+                          // className='basis-64 shrink-0 items-center flex '
+                          key={index}
+                        >
+                          <img
+                            className='shadow-md'
+                            src={photo}
+                            onMouseEnter={() => setHoverer(photo)}
+                            onMouseLeave={() => setHoverer(photo)}
+                            index={index}
+                          ></img>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div className='flex justify-center'>
+                    <div className='flex flex-row gap-x-2 h-48 w-96'>
+                      {photoRay.map((photo, index) => (
+                        <div
+                          // className='basis-64 shrink-0 items-center flex '
+                          key={index}
+                        >
+                          <img
+                            className='shadow-md'
+                            src={photo}
+                            onMouseEnter={() => setHoverer(photo)}
+                            onMouseLeave={() => setHoverer(photo)}
+                            index={index}
+                          ></img>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className='w-[40vw] h-auto'>
+                <ModalImage
+                  className='shadow-md m-4 h-96'
+                  small={hoverer}
+                  large={hoverer}
+                />
+              </div>
             </div>
-          </div>
-
-          <div
-            className={`transition-opacity ease-in-out duration-500 ${
-              inView ? 'bg-white opacity-100 ' : 'bg-black opacity-0'
-            }`}
-          >
-            <div
-              className={`transition-opacity ease-in-out duration-500 mt-64 ${
-                inView
-                  ? 'bg-white opacity-100 -translate-y16'
-                  : 'bg-black opacity-0'
-              }`}
-            >
-              {/* <div className='bg-white h-30 mt-16 duration00'></div> */}
-              <div className='bg-white duration-500'>
+          ) : (
+            <div className=''>
+              <div className='flex mb-8 justify-center'>
+                <ReactAudioPlayer className='' src={audio} controls />
+              </div>
+              <div className=''>
                 <SideMenu photoRay={photoRay} />
               </div>
-              <div ref={ref} className='invisible w-0'>
-                <h2>{`inside viewport ${inView}.`}</h2>
-              </div>
-              <div className='flex justify-center mt4 mb-8'>
-                <ReactAudioPlayer src={audio} controls />
-              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
-    )
-  }
-  return (
-    <>
-      <InView />
-    </>
+    </div>
   )
 }
 
