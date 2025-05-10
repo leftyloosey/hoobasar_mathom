@@ -17,7 +17,7 @@ const Stories = () => {
   return (
     <div>
       <div
-        className={`bg-white flex flex-col gap-y-64 overflow-y-auto h-[71vh] p-16 duration-700 `}
+        className={`bg-white flex flex-col gap-y-64 overflow-y-auto h-[77vh] md:h-[75vh] p-10 duration-700 `}
       >
         <StoryFrame
           storyID={m}

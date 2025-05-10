@@ -47,7 +47,7 @@ function App() {
               setToggleNav={setToggleNav}
               hideExcess={hideExcess}
               setHideExcess={setHideExcess}
-              // toggler={toggler}
+              toggler={toggler}
             />
           </div>
         </div>

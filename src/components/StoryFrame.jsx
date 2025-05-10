@@ -12,7 +12,7 @@ const StoryFrame = ({
 }) => {
   const { ref, inView } = useInView({
     rootMargin: '0px 0px -50px 0px',
-    threshold: 0.5,
+    threshold: 0.2,
     initialInView: false,
   })
   const nullStyle = {
@@ -57,18 +57,18 @@ const StoryFrame = ({
           alt='house front'
         />
 
-        <div className=''>
-          <div>
-            <p
-              id={storyID}
-              className='bg-black text-white p-4 w-full shadow-md'
-              onClick={(e) => {
-                handleClick(e)
-              }}
-            >
-              {abstract}
-            </p>
-          </div>
+        {/* <div className=''> */}
+        <div>
+          <p
+            id={storyID}
+            className='bg-black text-white p-4 w-full shadow-md'
+            onClick={(e) => {
+              handleClick(e)
+            }}
+          >
+            {abstract}
+          </p>
+          {/* </div> */}
         </div>
       </div>
     </div>
