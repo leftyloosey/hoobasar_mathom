@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   resourcesForRenters,
   resourcesForHomeowners,
@@ -22,20 +23,32 @@ import {
 
 const Resources = () => {
   const ResourceLink = ({ linkInfo }) => {
+    const [hoverer, setHoverer] = useState('')
+
     return (
       <p>
-        <a className='font-bold text-blue-400' href={linkInfo[0]}>
+        <a
+          className='font-bold text-blue400 text-gray-500'
+          href={linkInfo[0]}
+          onMouseEnter={() => setHoverer(linkInfo[2])}
+          onMouseLeave={() => setHoverer()}
+        >
           {linkInfo[1]}
         </a>
-        {linkInfo[2] ? <span className='text-xs'>{linkInfo[2]}</span> : <></>}
+        {hoverer ? (
+          <span className='text-xs text-nowrap pl-1.5'>{hoverer}</span>
+        ) : (
+          <></>
+        )}
+        {/* {linkInfo[2] ? <span className='text-xs'>{linkInfo[2]}</span> : <></>} */}
       </p>
     )
   }
 
   return (
-    <div className='ml-5'>
+    <div className='ml-5 flex flex-row'>
       {/* <span className='text-2xl font-bold'>Resources</span> */}
-      <div className='flex flex-col gap-y-4 mt-2 pb-2 w-1/2'>
+      <div className='flex flex-col gap-y-4 mt-2 pb-2'>
         <ResourceLink linkInfo={resourcesForRenters} />
         <ResourceLink linkInfo={resourcesForHomeowners} />
         <ResourceLink linkInfo={housingConnect} />
@@ -56,6 +69,7 @@ const Resources = () => {
         <ResourceLink linkInfo={utahLabor} />
         <ResourceLink linkInfo={utahLegal} />
       </div>
+      {/* <div className='w-full h-64 mt-96'>{hoverer}</div> */}
     </div>
   )
 }
