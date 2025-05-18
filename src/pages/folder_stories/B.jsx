@@ -1,7 +1,7 @@
 import { B_abstract, B_cover_style } from '../../assets/B/B_constants'
 import B_talking from '../../assets/B/B_talking.mp3'
 
-import christmas_tree from '../../assets/B/christmas_tree.jpg'
+import christmas_tree from '../../assets/B/christmas_tree.JPG'
 import couch_tree from '../../assets/B/couch_tree.jpg'
 import microwave_oven from '../../assets/B/microwave_oven.jpg'
 import night_cars from '../../assets/B/night_cars.jpg'
