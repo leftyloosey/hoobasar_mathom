@@ -44,7 +44,7 @@ const Resources = () => {
               {linkInfo[1]}
             </a>
             {hoverer ? (
-              <span className='text-xs text-nowrap pl-1.5'>{hoverer}</span>
+              <span className='text-sm text-nowrap pl-1.5'>{hoverer}</span>
             ) : (
               <></>
             )}
@@ -54,7 +54,7 @@ const Resources = () => {
             <a className='font-bold text-gray-500' href={linkInfo[0]}>
               {linkInfo[1]}
             </a>
-            <span className='text-xs pl-1.5'>{linkInfo[2]}</span>
+            <span className='text-sm pl-1.5'>{linkInfo[2]}</span>
           </div>
         )}
       </p>

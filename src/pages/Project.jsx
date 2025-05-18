@@ -45,9 +45,9 @@ const Project = () => {
           <div className=''>
             {/* <div className='flex justify-center w-screen shortest-abstract-fade'> */}
             <div className='flex flex-row'>
-              <span className='text-2xl font-bold absolute top-32 -left-4.5 rotate-270 text-nowrap md:translate-x-40'>
+              {/* <span className='text-2xl font-bold absolute top-32 -left-4.5 rotate-270 text-nowrap md:translate-x-40'>
                 The Project
-              </span>
+              </span> */}
               <div className='flex justify-end'>
                 <p className='flex flex-row w-5/6 justify-end mt-4 mr-0.5 md:mb-3'>
                   {/* <p className='-ml-40 md:-ml-30 md:mb-4 w-[85vw] md:w-[72vw]'> */}

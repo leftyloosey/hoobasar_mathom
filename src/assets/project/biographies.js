@@ -1,5 +1,5 @@
 const kateBiography =
-  'is an architectural historian and an Assistant Professor of Architecture at the University of Utah. She researches housing under pressure and in times of change. Her first book, Taking the Soviet Union Apart Room by Room (NIUP/Cornell UP) was published in 2023. Her book Mass Housing in Ukraine (co-authored with Philipp Meuser) was published by DOM Publishers in September 2024.'
+  'Kateryna Malaia is an architectural historian and an Assistant Professor of Architecture at the University of Utah. She researches housing under pressure and in times of change. Her first book, Taking the Soviet Union Apart Room by Room (NIUP/Cornell UP) was published in 2023. Her book Mass Housing in Ukraine (co-authored with Philipp Meuser) was published by DOM Publishers in September 2024.'
 const jessBiography =
   'Jessica DiCarlo is a human geographer and political ecologist. She is an Assistant Professor in the School of Environment, Society & Sustainability and in Environmental Humanities at the University of Utah. Her research explores development, infrastructure, and environmental politics, combining field-based methods with critical theory.'
 

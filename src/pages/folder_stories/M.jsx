@@ -1,7 +1,7 @@
 import StoryPage from '../../components/StoryPage.jsx'
 
 import { M_abstract } from '../../assets/M/M_constants.js'
-import JO_talking from '../../assets/JO/JO_talking.wav'
+import M_talking from '../../assets/M/M_talking.mp3'
 
 import building_side from '../../assets/M/building_side.JPG'
 import stove from '../../assets/M/stove.JPG'
@@ -13,7 +13,7 @@ const photoRay = [u_courtyard, front_door, vent, stove, building_side]
 const M = () => {
   return (
     <>
-      <StoryPage abstract={M_abstract} audio={JO_talking} photoRay={photoRay} />
+      <StoryPage abstract={M_abstract} audio={M_talking} photoRay={photoRay} />
     </>
   )
 }

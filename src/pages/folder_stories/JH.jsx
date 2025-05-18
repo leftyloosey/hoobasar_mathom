@@ -1,6 +1,6 @@
 import StoryPage from '../../components/StoryPage.jsx'
 
-import JH_talking from '../../assets/JO/JO_talking.wav'
+import JH_talking from '../../assets/JH/JH_talking.mp3'
 import { JH_abstract } from '../../assets/JH/JH_constants.js'
 
 import inside_door from '../../assets/JH/inside_door.JPG'
