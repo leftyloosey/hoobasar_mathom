@@ -25,8 +25,6 @@ import {
 import house2 from '../../dist/house2.svg'
 
 const Stories = () => {
-  // const [fadeOffElements, setFadeOffElements] = useState(false)
-
   return (
     <div>
       <div
@@ -38,14 +36,12 @@ const Stories = () => {
           coverPhoto={coffee}
           abstract={JH_abstract}
         />
-
         <StoryFrame
           storyID={m}
           // coverStyle={M_cover_style}
           coverPhoto={building_side}
           abstract={M_abstract}
         />
-
         <StoryFrame
           storyID={jo}
           coverStyle={JO_cover_style}

@@ -9,7 +9,6 @@ import './App.css'
 function App() {
   const [toggleNav, setToggleNav] = useState(false)
   const [hideExcess, setHideExcess] = useState(false)
-  // const [storyLoad, setStoryLoad] = useState(false)
   const toggler = (toggleNav, setToggleNav, hideExcess, setHideExcess) => {
     setToggleNav(!toggleNav)
 
@@ -41,8 +40,6 @@ function App() {
             `}
           >
             <Sidebar
-              // storyLoad={storyLoad}
-              // setStoryLoad={setStoryLoad}
               toggleNav={toggleNav}
               setToggleNav={setToggleNav}
               hideExcess={hideExcess}
@@ -54,10 +51,8 @@ function App() {
       </header>
       <div className='bg-white pt-6'>
         <Outlet />
-        {/* <Outlet context={[storyLoad, setStoryLoad]} /> */}
       </div>
     </div>
-    // </div>
   )
 }
 

@@ -5,7 +5,6 @@ import ModalImage from 'react-modal-image'
 import { useEffect, useState } from 'react'
 
 const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
-  //   const [storyGalleryWide, setstoryGalleryWide] = useState(false)
   const [width, setWidth] = useState(window.innerWidth)
   const [hoverer, setHoverer] = useState(photoRay[0])
 
@@ -23,7 +22,6 @@ const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
         </div>
 
         <div className=''>
-          {/* <div className='transition-opacity ease-in-out duration-500'> */}
           {width > 640 ? (
             <div className='flex flex-row justify-center md:gap-x-4 lg:gap-x-20 h-[0vh]'>
               <div className='flex flex-col'>
@@ -42,10 +40,7 @@ const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
                     />
                     <div className='flex flex-row gap-x-2 h-48 w-96'>
                       {photoRay.map((photo, index) => (
-                        <div
-                          // className='basis-64 shrink-0 items-center flex '
-                          key={index}
-                        >
+                        <div key={index}>
                           <img
                             className='shadow-md'
                             src={photo}
@@ -61,10 +56,7 @@ const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
                   <div className='flex justify-center'>
                     <div className='flex flex-row gap-x-2 h-48 w-96'>
                       {photoRay.map((photo, index) => (
-                        <div
-                          // className='basis-64 shrink-0 items-center flex '
-                          key={index}
-                        >
+                        <div key={index}>
                           <img
                             className='shadow-md'
                             src={photo}

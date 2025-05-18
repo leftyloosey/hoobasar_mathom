@@ -17,7 +17,6 @@ const PS = () => {
         abstract={PS_abstract}
         audio={PS_talking}
         photoRay={photoRay}
-        // livingRoomPlan={living_room_plan}
       />
     </>
   )

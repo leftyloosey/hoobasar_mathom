@@ -9,7 +9,6 @@ import jessPicture from '../assets/project/jess_d.png'
 import saganPicture from '../assets/project/sagan.jpg'
 
 const Project = () => {
-  // const style = { paddingTop: '1px' }
   const style2 = { height: '200px', width: 'auto' }
   // const fade = 'abstract-fade'
 
@@ -37,7 +36,6 @@ const Project = () => {
   }
 
   return (
-    // <div className=''>
     <div className=''>
       <div className='w-full flex'>
         <div className=''>
@@ -87,7 +85,6 @@ const Project = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </div>
   )
 }

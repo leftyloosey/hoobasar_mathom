@@ -14,7 +14,6 @@ const LSE = () => {
         abstract={LSE_abstract}
         audio={LSE_talking}
         photoRay={photoRay}
-        // livingRoomPlan={living_room_plan}
       />
     </>
   )

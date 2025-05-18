@@ -1,15 +1,7 @@
 import { useNavigate } from 'react-router'
 import { useInView } from 'react-intersection-observer'
 
-const StoryFrame = ({
-  storyID,
-  coverStyle,
-  abstract,
-  coverPhoto,
-  // el,
-  // fadeOffElements,
-  // setFadeOffElements,
-}) => {
+const StoryFrame = ({ storyID, coverStyle, abstract, coverPhoto }) => {
   const { ref, inView } = useInView({
     rootMargin: '0px 0px -50px 0px',
     threshold: 0.4,
@@ -23,19 +15,7 @@ const StoryFrame = ({
 
   const handleClick = (e) => {
     e.preventDefault()
-
-    // setTimeout(() => {
-    //   window.scrollTo({
-    //     top: 0,
-    //     left: 0,
-    //     behavior: 'smooth',
-    //   })
-    // setFadeOffElements(true)
-    // e.target.style.visibility = 'hidden'
-    // }, '400')
-    // setTimeout(() => {
     navigate(`/${e.target.id}`)
-    // }, '1000')
   }
 
   return (
@@ -57,7 +37,6 @@ const StoryFrame = ({
           alt='cover photo'
         />
 
-        {/* <div className=''> */}
         <div>
           <p
             id={storyID}
@@ -68,7 +47,6 @@ const StoryFrame = ({
           >
             {abstract}
           </p>
-          {/* </div> */}
         </div>
       </div>
     </div>

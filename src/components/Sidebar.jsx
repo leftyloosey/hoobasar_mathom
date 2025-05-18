@@ -1,12 +1,9 @@
 import { Link } from 'react-router'
-// ${storyLoad ? 'md:-translate-x-72 md:mr-3' : ''}
-// ${storyLoad && !toggleNav ? 'gap-x-96 opacity-0' : ''}
 
 const Sidebar = ({
   toggleNav,
   setToggleNav,
   toggler,
-  // storyLoad,
   hideExcess,
   setHideExcess,
 }) => {
@@ -26,21 +23,13 @@ const Sidebar = ({
         </Link>
       </div>
 
-      <div
-      // onClick={() =>
-      //   toggler(toggleNav, setToggleNav, hideExcess, setHideExcess)
-      // }
-      >
+      <div>
         <Link className='hover:bg-black hover:text-white' to='/project'>
           Project
         </Link>
       </div>
 
-      <div
-      // onClick={() =>
-      //   toggler(toggleNav, setToggleNav, hideExcess, setHideExcess)
-      // }
-      >
+      <div>
         <Link className='hover:bg-black hover:text-white' to='/resources'>
           Resources
         </Link>

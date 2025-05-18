@@ -20,12 +20,7 @@ const photoRay = [
 const B = () => {
   return (
     <>
-      <StoryPage
-        abstract={B_abstract}
-        audio={B_talking}
-        photoRay={photoRay}
-        // livingRoomPlan={living_room_plan}
-      />
+      <StoryPage abstract={B_abstract} audio={B_talking} photoRay={photoRay} />
     </>
   )
 }

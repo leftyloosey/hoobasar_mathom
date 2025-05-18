@@ -5,8 +5,6 @@ import {
   housingConnect,
   roadHome,
   housingAuthSLC,
-  // thrivingPlace,
-  // utahHousingCoalition,
   uhcSLConf,
   utahCommunityAction,
   unitedWay,
@@ -63,15 +61,12 @@ const Resources = () => {
 
   return (
     <div className='ml-5 h-[80vh] overflow-y-auto'>
-      {/* <span className='text-2xl font-bold'>Resources</span> */}
       <div className='flex flex-col gap-y-4 mt-2 pb-2'>
         <ResourceLink linkInfo={resourcesForRenters} />
         <ResourceLink linkInfo={resourcesForHomeowners} />
         <ResourceLink linkInfo={housingConnect} />
         <ResourceLink linkInfo={roadHome} />
         <ResourceLink linkInfo={housingAuthSLC} />
-        {/* <ResourceLink linkInfo={thrivingPlace} /> */}
-        {/* <ResourceLink linkInfo={utahHousingCoalition} /> */}
         <ResourceLink linkInfo={uhcSLConf} />
         <ResourceLink linkInfo={utahCommunityAction} />
         <ResourceLink linkInfo={unitedWay} />
@@ -85,7 +80,6 @@ const Resources = () => {
         <ResourceLink linkInfo={utahLabor} />
         <ResourceLink linkInfo={utahLegal} />
       </div>
-      {/* <div className='w-full h-64 mt-96'>{hoverer}</div> */}
     </div>
   )
 }
