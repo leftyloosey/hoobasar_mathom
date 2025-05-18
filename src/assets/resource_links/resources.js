@@ -83,7 +83,7 @@ const nationalHousing = [
 const allianceCommunity = [
   'https://alliance-community.org/',
   'Alliance Community Services',
-  'provides free or low-cost resources for the Latin/Hispanic community. Their mission is to promote the well-being of culturally diverse and underserved individuals by providing services for health, safety, legal, and social growth',
+  'provides free or low-cost resources for the Latin/Hispanic community',
 ]
 const utahLabor = [
   'http://laborcommission.utah.gov/divisions/AntidiscriminationAndLabor/fair_housing.html',
