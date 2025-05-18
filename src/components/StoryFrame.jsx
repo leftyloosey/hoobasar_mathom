@@ -24,18 +24,18 @@ const StoryFrame = ({
   const handleClick = (e) => {
     e.preventDefault()
 
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-      })
-      // setFadeOffElements(true)
-      // e.target.style.visibility = 'hidden'
-    }, '400')
-    setTimeout(() => {
-      navigate(`/${e.target.id}`)
-    }, '1000')
+    // setTimeout(() => {
+    //   window.scrollTo({
+    //     top: 0,
+    //     left: 0,
+    //     behavior: 'smooth',
+    //   })
+    // setFadeOffElements(true)
+    // e.target.style.visibility = 'hidden'
+    // }, '400')
+    // setTimeout(() => {
+    navigate(`/${e.target.id}`)
+    // }, '1000')
   }
 
   return (
