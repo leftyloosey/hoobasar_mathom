@@ -54,7 +54,7 @@ const StoryFrame = ({
           style={coverStyle ? coverStyle : nullStyle}
           className='shadow-2xl h-72 w-auto'
           src={coverPhoto}
-          alt='house front'
+          alt='cover photo'
         />
 
         {/* <div className=''> */}

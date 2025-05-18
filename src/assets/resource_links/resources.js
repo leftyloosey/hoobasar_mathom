@@ -1,48 +1,48 @@
 const resourcesForRenters = [
   'https://utahhousing.org/resources/resources-for-renters/',
   'Utah Housing Coalition - Resources for Renters',
-  'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+  'is a multilingual booklet, available in Arabic, English, Spanish​ and Vietnamese, seeks to address key concerns in a tenant-landlord relationship in a meaningful and respectful manner',
 ]
 const resourcesForHomeowners = [
   'https://utahhousing.org/resources/resources-for-homeowners/',
   'Utah Housing Coalition - Resources for Homeowners',
-  'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+  'provides information for homeowners repair programs, community assistance programs, and mortgage assistance',
 ]
 const housingConnect = [
   'https://housingconnect.org/',
   'Housing Connect of Salt Lake County',
-  'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+  'connects tenants to affordable housing opportunities',
 ]
 const roadHome = [
   'https://theroadhome.org/',
   'The Road Home',
-  'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+  'provides emergency shelter, supportive services, and housing assistance that help individuals and families step out of homelessness',
 ]
 
 const housingAuthSLC = [
   'https://www.haslcutah.org/',
   'Housing Authority of Salt Lake City',
-  'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+  'offers two main types of housing options: assisted/subsidized and non- subsidized affordable housing in Salt Lake City',
 ]
-const thrivingPlace = [
-  'https://www.slc.gov/can/thriving-in-place/',
-  'Thriving in Place',
-  'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
-]
-const utahHousingCoalition = [
-  'https://www.utahhousing.org',
-  'Utah Housing Coalition',
-  'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
-]
+// const thrivingPlace = [
+//   'https://www.slc.gov/can/thriving-in-place/',
+//   'Thriving in Place',
+//   'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+// // ]
+// const utahHousingCoalition = [
+//   'https://www.utahhousing.org',
+//   'Utah Housing Coalition',
+//   'annual conference on housing matters in Utah.',
+// ]
 const uhcSLConf = [
   'https://utahhousing.org/events-research/conference/',
   'Utah Housing Coalition’s Salt Lake County Conference on Housing',
-  'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+  'is an annual conference on housing matters in Utah',
 ]
 const utahCommunityAction = [
   'https://utahca.org/housing/',
   'Utah Community Action',
-  'offers services for low-income individuals and families, including housing case management.',
+  'offers services for low-income individuals and families, including housing case management',
 ]
 const unitedWay = [
   'http://www.uw.org/211/',
@@ -52,17 +52,17 @@ const unitedWay = [
 const neighborNonprofit = [
   'https://nnhc.org/',
   'Neighborhood Nonprofit Housing Corporation',
-  'offers housing resources for various housing settings for diverse populations in Northern Utah.',
+  'offers housing resources for various housing settings for diverse populations in Northern Utah',
 ]
 const assistUtah = [
   'https://www.assistutah.org/',
   'Assist Utah',
-  'provides architectural design, community planning, and development assistance to nonprofit and community groups; housing repair for low-income households; and accessibility design assistance to people with disabilities.',
+  'provides architectural design, community planning, and development assistance to nonprofit and community groups; housing repair for low-income households; and accessibility design assistance to people with disabilities',
 ]
 const habitat = [
   'https://www.habitat.org/volunteer/near-you/home-preservation',
   'Habitat for Humanity',
-  'offers home repair services to homeowners so they can continue to live in safe, decent homes for years to come.',
+  'offers home repair services to homeowners so they can continue to live in safe, decent homes for years to come',
 ]
 const tripleA = [
   'http://www.faircredit.org/',
@@ -73,27 +73,27 @@ const tripleA = [
 const disabilityLaw = [
   'http://disabilitylawcenter.org/',
   'Disability Law Center',
-  'is a private non-profit organization, designated as the Protection and Advocacy agency for the state of Utah, to protect the rights of people with disabilities in Utah. DLC is the group that represents Utahns in Fair Housing Act claims.',
+  'is a private non-profit organization, designated as the Protection and Advocacy agency for the state of Utah, to protect the rights of people with disabilities in Utah. DLC is the group that represents Utahns in Fair Housing Act claims',
 ]
 const nationalHousing = [
   'http://www.preservationdatabase.org/',
   'National Housing Preservation Database',
-  'is a search engine for affordable housing by area, housing type, funding stream, and other characteristics of affordable housing.',
+  'is a search engine for affordable housing by area, housing type, funding stream, and other characteristics of affordable housing',
 ]
 const allianceCommunity = [
   'https://alliance-community.org/',
   'Alliance Community Services',
-  'provides free or low-cost resources for the Latin/Hispanic community. Their mission is to promote the well-being of culturally diverse and underserved individuals by providing services for health, safety, legal, and social growth.',
+  'provides free or low-cost resources for the Latin/Hispanic community. Their mission is to promote the well-being of culturally diverse and underserved individuals by providing services for health, safety, legal, and social growth',
 ]
 const utahLabor = [
   'http://laborcommission.utah.gov/divisions/AntidiscriminationAndLabor/fair_housing.html',
-  'Utah Labor Commission Antidiscrimination & Labor Division’s',
-  'Fair Housing focus is to administer and enforce Utah’s Fair Housing Act.',
+  'Utah Labor Commission Antidiscrimination & Labor Division',
+  "aims to administer and enforce Utah's Fair Housing Act.",
 ]
 const utahLegal = [
   'http://utahlegalservices.org/',
   'Utah Legal Services',
-  'is a nonprofit law office committed to making equal justice a reality by providing free legal help in non-criminal cases to low-income Utahns.',
+  'is a nonprofit law office committed to making equal justice a reality by providing free legal help in non-criminal cases to low-income Utahns',
 ]
 export {
   resourcesForRenters,
@@ -101,8 +101,8 @@ export {
   housingConnect,
   roadHome,
   housingAuthSLC,
-  thrivingPlace,
-  utahHousingCoalition,
+  // thrivingPlace,
+  // utahHousingCoalition,
   uhcSLConf,
   utahCommunityAction,
   unitedWay,

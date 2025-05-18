@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   resourcesForRenters,
   resourcesForHomeowners,
   housingConnect,
   roadHome,
   housingAuthSLC,
-  thrivingPlace,
-  utahHousingCoalition,
+  // thrivingPlace,
+  // utahHousingCoalition,
   uhcSLConf,
   utahCommunityAction,
   unitedWay,
@@ -22,31 +22,47 @@ import {
 } from '../assets/resource_links/resources'
 
 const Resources = () => {
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
   const ResourceLink = ({ linkInfo }) => {
     const [hoverer, setHoverer] = useState('')
-
     return (
       <p>
-        <a
-          className='font-bold text-blue400 text-gray-500'
-          href={linkInfo[0]}
-          onMouseEnter={() => setHoverer(linkInfo[2])}
-          onMouseLeave={() => setHoverer()}
-        >
-          {linkInfo[1]}
-        </a>
-        {hoverer ? (
-          <span className='text-xs text-nowrap pl-1.5'>{hoverer}</span>
+        {width > 1024 ? (
+          <div>
+            <a
+              className='font-bold text-gray-500'
+              href={linkInfo[0]}
+              onMouseEnter={() => setHoverer(linkInfo[2])}
+              onMouseLeave={() => setHoverer()}
+            >
+              {linkInfo[1]}
+            </a>
+            {hoverer ? (
+              <span className='text-xs text-nowrap pl-1.5'>{hoverer}</span>
+            ) : (
+              <></>
+            )}
+          </div>
         ) : (
-          <></>
+          <div>
+            <a className='font-bold text-gray-500' href={linkInfo[0]}>
+              {linkInfo[1]}
+            </a>
+            <span className='text-xs pl-1.5'>{linkInfo[2]}</span>
+          </div>
         )}
-        {/* {linkInfo[2] ? <span className='text-xs'>{linkInfo[2]}</span> : <></>} */}
       </p>
     )
   }
 
   return (
-    <div className='ml-5 flex flex-row'>
+    <div className='ml-5 h-[80vh] overflow-y-auto'>
       {/* <span className='text-2xl font-bold'>Resources</span> */}
       <div className='flex flex-col gap-y-4 mt-2 pb-2'>
         <ResourceLink linkInfo={resourcesForRenters} />
@@ -54,8 +70,8 @@ const Resources = () => {
         <ResourceLink linkInfo={housingConnect} />
         <ResourceLink linkInfo={roadHome} />
         <ResourceLink linkInfo={housingAuthSLC} />
-        <ResourceLink linkInfo={thrivingPlace} />
-        <ResourceLink linkInfo={utahHousingCoalition} />
+        {/* <ResourceLink linkInfo={thrivingPlace} /> */}
+        {/* <ResourceLink linkInfo={utahHousingCoalition} /> */}
         <ResourceLink linkInfo={uhcSLConf} />
         <ResourceLink linkInfo={utahCommunityAction} />
         <ResourceLink linkInfo={unitedWay} />
