@@ -1,7 +1,7 @@
 const resourcesForRenters = [
   'https://utahhousing.org/resources/resources-for-renters/',
   'Utah Housing Coalition - Resources for Renters',
-  'is a multilingual booklet, available in Arabic, English, Spanish​ and Vietnamese, seeks to address key concerns in a tenant-landlord relationship in a meaningful and respectful manner',
+  'seeks to address key concerns in a tenant-landlord relationship in a meaningful and respectful manner',
 ]
 const resourcesForHomeowners = [
   'https://utahhousing.org/resources/resources-for-homeowners/',
@@ -57,7 +57,7 @@ const neighborNonprofit = [
 const assistUtah = [
   'https://www.assistutah.org/',
   'Assist Utah',
-  'provides architectural design, community planning, and development assistance to nonprofit and community groups; housing repair for low-income households; and accessibility design assistance to people with disabilities',
+  'provides housing repair for low-income households; and accessibility design assistance to people with disabilities',
 ]
 const habitat = [
   'https://www.habitat.org/volunteer/near-you/home-preservation',
@@ -73,7 +73,7 @@ const tripleA = [
 const disabilityLaw = [
   'http://disabilitylawcenter.org/',
   'Disability Law Center',
-  'is a private non-profit organization, designated as the Protection and Advocacy agency for the state of Utah, to protect the rights of people with disabilities in Utah. DLC is the group that represents Utahns in Fair Housing Act claims',
+  'is a private non-profit organization that protects the rights of people with disabilities in Utah in Fair Housing Act claims',
 ]
 const nationalHousing = [
   'http://www.preservationdatabase.org/',

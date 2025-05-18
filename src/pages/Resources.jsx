@@ -36,7 +36,7 @@ const Resources = () => {
         {width > 1024 ? (
           <div>
             <a
-              className='font-bold text-gray-500'
+              className='font-bold text-nowrap text-gray-500'
               href={linkInfo[0]}
               onMouseEnter={() => setHoverer(linkInfo[2])}
               onMouseLeave={() => setHoverer()}
@@ -54,7 +54,7 @@ const Resources = () => {
             <a className='font-bold text-gray-500' href={linkInfo[0]}>
               {linkInfo[1]}
             </a>
-            <span className='text-sm pl-1.5'>{linkInfo[2]}</span>
+            <span className='text-sm no-wrap pl-1.5'>{linkInfo[2]}</span>
           </div>
         )}
       </p>
