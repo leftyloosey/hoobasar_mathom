@@ -1,15 +1,14 @@
 import { PS_abstract } from '../../assets/PS/PS_constants'
 import PS_talking from '../../assets/PS/PS_talking.mp3'
 
-import back_door from '../../assets/PS/back_door.jpg'
-import blue_front_door from '../../assets/PS/blue_front_door.jpg'
-import sky_blue_front from '../../assets/PS/sky_blue_front.jpg'
+import back_door from '../../assets/PS/back_door.JPG'
+import blue_front_door from '../../assets/PS/blue_front_door.JPG'
+import sky_blue_front from '../../assets/PS/sky_blue_front.JPG'
 import shower from '../../assets/PS/shower.jpg'
-// import back_door from '../../assets/PS/'
 
 import StoryPage from '../../components/StoryPage'
 
-const photoRay = [back_door, blue_front_door, sky_blue_front, shower]
+const photoRay = [sky_blue_front, back_door, blue_front_door, shower]
 
 const PS = () => {
   return (
