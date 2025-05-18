@@ -91,8 +91,12 @@ const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
               <div className='flex mb-8 justify-center'>
                 <ReactAudioPlayer className='' src={audio} controls />
               </div>
-              <div className=''>
-                <SideMenu photoRay={photoRay} />
+              <div className='flex flex-row'>
+                {livingRoomPlan ? (
+                  <SideMenu plan={livingRoomPlan} photoRay={photoRay} />
+                ) : (
+                  <SideMenu photoRay={photoRay} />
+                )}
               </div>
             </div>
           )}

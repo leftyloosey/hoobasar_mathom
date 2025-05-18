@@ -9,13 +9,7 @@ import house_front from '../../assets/JO/house_front.JPG'
 import kitchen_table from '../../assets/JO/kitchen_table.JPG'
 import living_room_plan from '../../assets/JO/living_room_plan.jpg'
 
-const photoRay = [
-  // living_room_plan,
-  front_door,
-  house_front,
-  suburb,
-  kitchen_table,
-]
+const photoRay = [front_door, kitchen_table, house_front, suburb]
 
 const TryJH = () => {
   return (

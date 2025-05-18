@@ -10,10 +10,10 @@ import night_stair from '../../assets/B/night_stair.JPG'
 import StoryPage from '../../components/StoryPage'
 
 const photoRay = [
-  night_stair,
-  christmas_tree,
-  couch_tree,
   microwave_oven,
+  couch_tree,
+  christmas_tree,
+  night_stair,
   night_cars,
 ]
 

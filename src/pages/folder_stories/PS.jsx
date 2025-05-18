@@ -8,7 +8,7 @@ import shower from '../../assets/PS/shower.JPG'
 
 import StoryPage from '../../components/StoryPage'
 
-const photoRay = [sky_blue_front, back_door, blue_front_door, shower]
+const photoRay = [back_door, blue_front_door, shower, sky_blue_front]
 
 const PS = () => {
   return (
