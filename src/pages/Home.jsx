@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 import DetectScreen from '../components/DetectScreen'
-import droneLarge from '../assets/drone_footage/drone_short.mp4'
+import droneLarge from '../assets/drone_footage/drone_loop_how_long.mp4'
+// import droneLarge from '../assets/drone_footage/drone_short.mp4'
 // import droneMobileAspect from '../assets/drone_footage/drone_mobile_aspect.mp4'
 
 const Home = () => {
