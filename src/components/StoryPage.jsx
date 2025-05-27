@@ -15,10 +15,12 @@ const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
   }, [])
 
   return (
-    <div className='bg-white pb-8 h-[100vh] mdh-[170vh] lg:h-[90vh] short-abstract-fade w-[100vw]'>
+    <div className='bg-white pb-8 h-[100vh] mdh-[170vh] lg:h-[90vh] short-abstract-fade'>
       <div className='flex flex-col pl-1 pr-1'>
         <div className='flex justify-center'>
-          <div className={`mt-8 w-5/6 text-xl p-4 mb-1`}>{abstract}</div>
+          <div className={`mt-8 w-5/6 text-xl p-4 mb-1 text-red-500`}>
+            {abstract}
+          </div>
         </div>
 
         <div className=''>
@@ -80,11 +82,11 @@ const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
               </div>
             </div>
           ) : (
-            <div className=''>
+            <div className='w-[100vw]'>
               <div className='flex mb-8 justify-center'>
                 <ReactAudioPlayer className='' src={audio} controls />
               </div>
-              <div className='flex flex-row'>
+              <div className='flex flex-row w-[100vw]'>
                 {livingRoomPlan ? (
                   <SideMenu plan={livingRoomPlan} photoRay={photoRay} />
                 ) : (
