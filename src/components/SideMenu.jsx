@@ -3,7 +3,7 @@ import ModalImage from 'react-modal-image'
 const SideMenu = ({ photoRay, plan }) => {
   return (
     <div className='flex sm:justify-center'>
-      <div className='flex flex-row space-x-2 overflow-x-auto overflow-y-hidden no-scrollbar sm:w-72 '>
+      <div className='flex flex-row space-x-2 overflow-x-auto overflow-y-hidden no-scrollbar w-[100vw] smw-72 md:w-96'>
         {plan ? <img className='h-64 w-auto' src={plan} alt='plan' /> : <></>}
         {photoRay.map((photo, index) => (
           <div className='basis-64 shrink-0 items-center flex' key={index}>
