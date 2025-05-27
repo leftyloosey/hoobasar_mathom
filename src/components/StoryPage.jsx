@@ -15,7 +15,7 @@ const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
   }, [])
 
   return (
-    <div className='bg-white pb-8 h-[100vh] md:h-[170vh] lg:h-[90vh] short-abstract-fade'>
+    <div className='bg-white pb-8 md:h-[170vh] lg:h-[90vh] short-abstract-fade'>
       <div className='flex flex-col pl-1 pr-1'>
         <div className='flex justify-center'>
           <div className={`mt-8 w-5/6 text-xl p-4 mb-1`}>{abstract}</div>
@@ -23,7 +23,7 @@ const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
 
         <div className=''>
           {width > 640 ? (
-            <div className='flex flex-row justify-center md:gap-x-4 lg:gap-x-20 h-[0vh]'>
+            <div className='flex flex-row justify-center md:gap-x-4 lg:gap-x-20 h-[100vh]'>
               <div className='flex flex-col'>
                 <div className='flex mb-8 justify-center mt-4'>
                   <ReactAudioPlayer className='w-[30vw]' src={audio} controls />
