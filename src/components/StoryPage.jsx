@@ -22,7 +22,7 @@ const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
         </div>
 
         <div className=''>
-          {width > 1080 ? (
+          {width >= 1080 ? (
             // {width > 640 ? (
             <div className='flex flex-row justify-center md:gap-x-4 lg:gap-x-20'>
               <div className='flex flex-col'>
