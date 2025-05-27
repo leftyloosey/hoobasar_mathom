@@ -15,7 +15,7 @@ const StoryPage = ({ abstract, audio, photoRay, livingRoomPlan }) => {
   }, [])
 
   return (
-    <div className='bg-white pb-8 sm:h-[100vh] md:h-[170vh] lg:h-[90vh] short-abstract-fade'>
+    <div className='bg-white pb-8 h-[100vh] mdh-[170vh] lg:h-[90vh] short-abstract-fade w-[100vw]'>
       <div className='flex flex-col pl-1 pr-1'>
         <div className='flex justify-center'>
           <div className={`mt-8 w-5/6 text-xl p-4 mb-1`}>{abstract}</div>
