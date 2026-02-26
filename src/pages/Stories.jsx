@@ -1,6 +1,8 @@
 // import { useState } from 'react'
+import React, { Suspense } from 'react'
 
-import StoryFrame from '../components/StoryFrame.jsx'
+// import StoryFrame from '../components/StoryFrame.jsx'
+const StoryFrame = React.lazy(() => import('../components/StoryFrame.jsx'))
 
 import { jo, JO_abstract, JO_cover_style } from '../assets/JO/JO_constants.js'
 import house_front from '../assets/JO/house_front.JPG'
@@ -30,42 +32,44 @@ const Stories = () => {
       <div
         className={`bg-white flex flex-col gap-y-64 overflow-y-auto h-[77vh] md:h-[75vh] p-10 duration-700 pb-64`}
       >
-        <StoryFrame
-          storyID={jh}
-          coverStyle={JH_cover_style}
-          coverPhoto={coffee}
-          abstract={JH_abstract}
-        />
-        <StoryFrame
-          storyID={m}
-          // coverStyle={M_cover_style}
-          coverPhoto={building_side}
-          abstract={M_abstract}
-        />
-        <StoryFrame
-          storyID={jo}
-          coverStyle={JO_cover_style}
-          coverPhoto={house_front}
-          abstract={JO_abstract}
-        />
-        <StoryFrame
-          storyID={b}
-          coverStyle={B_cover_style}
-          coverPhoto={christmas_tree}
-          abstract={B_abstract}
-        />
-        <StoryFrame
-          storyID={ps}
-          coverStyle={PS_cover_style}
-          coverPhoto={shower}
-          abstract={PS_abstract}
-        />
-        <StoryFrame
-          storyID={lse}
-          coverStyle={LSE_cover_style}
-          coverPhoto={house2}
-          abstract={LSE_abstract}
-        />
+        <Suspense fallback={<div>Loading...</div>}>
+          <StoryFrame
+            storyID={jh}
+            coverStyle={JH_cover_style}
+            coverPhoto={coffee}
+            abstract={JH_abstract}
+          />
+          <StoryFrame
+            storyID={m}
+            // coverStyle={M_cover_style}
+            coverPhoto={building_side}
+            abstract={M_abstract}
+          />
+          <StoryFrame
+            storyID={jo}
+            coverStyle={JO_cover_style}
+            coverPhoto={house_front}
+            abstract={JO_abstract}
+          />
+          <StoryFrame
+            storyID={b}
+            coverStyle={B_cover_style}
+            coverPhoto={christmas_tree}
+            abstract={B_abstract}
+          />
+          <StoryFrame
+            storyID={ps}
+            coverStyle={PS_cover_style}
+            coverPhoto={shower}
+            abstract={PS_abstract}
+          />
+          <StoryFrame
+            storyID={lse}
+            coverStyle={LSE_cover_style}
+            coverPhoto={house2}
+            abstract={LSE_abstract}
+          />
+        </Suspense>
       </div>
     </div>
   )
